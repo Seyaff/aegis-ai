@@ -14,6 +14,14 @@ export const googleCallback = asyncHandler(
   },
 );
 
+
+export const gmailConnectCallback = asyncHandler(async(req: Request , res :Response) => {
+  res.redirect(`${Env.FRONTEND_ORIGIN}?gmail=connected`);
+})
+
+
+
+
 export const registerUser = asyncHandler(
   async (req: Request, res: Response, next: NextFunction) => {
     const body = registerSchema.parse({ ...req.body });

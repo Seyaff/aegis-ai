@@ -6,9 +6,12 @@ const appConfig = () => ({
   NODE_ENV: getEnv("NODE_ENV", "development"),
   BASE_PATH: getEnv("BASE_PATH", "/api/v1"),
 
+  REDIS_CLIIENT : getEnv("REDIS_CLIENT"),
+
 
   MONGO_URI: getEnv("MONGO_URI"),
   REDIS_URI : getEnv("REDIS_URI"),
+  UPSTASH_REDIS_REST_TOKEN: getEnv("UPSTASH_REDIS_REST_TOKEN"),
 
   FRONTEND_ORIGIN : getEnv("FRONTEND_ORIGIN"),
 
@@ -21,7 +24,9 @@ const appConfig = () => ({
 
   GOOGLE_CLIENT_ID : getEnv("GOOGLE_CLIENT_ID"),
   GOOGLE_CLIENT_SECRET : getEnv("GOOGLE_CLIENT_SECRET"),
-  GOOGLE_CALLBACK_URL : getEnv("GOOGLE_CALLBACK_URL")
+  GOOGLE_CALLBACK_URL : getEnv("GOOGLE_CALLBACK_URL"),
+
+  GEMINI_API_KEY : getEnv("GEMINI_API_KEY")
 
 
 

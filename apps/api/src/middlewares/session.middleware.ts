@@ -4,7 +4,7 @@ import { createClient } from "redis";
 import { Env } from "../config/app.config";
 
 
-const redisClient = createClient({
+export const redisClient = createClient({
   url: Env.REDIS_URI, 
 });
 

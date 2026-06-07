@@ -1,6 +1,6 @@
 import { Router } from "express";
 import passport from "passport";
-import { googleCallback, loginUser, registerUser } from "./auth.controller";
+import { gmailConnectCallback, googleCallback, loginUser, registerUser } from "./auth.controller";
 
 const authRoutes = Router();
 
@@ -14,13 +14,12 @@ authRoutes.get(
     accessType: "offline",
   }),
 );
+
+
 authRoutes.get(
   "/google/callback",
   passport.authenticate("google", { failureRedirect: "/login" }),
   googleCallback,
 );
-
-
-
 
 export default authRoutes;
